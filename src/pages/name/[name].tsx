@@ -8,7 +8,7 @@ import { NextPageCustom, PokemonDetail, PokemonListResponse, PropsDetails } from
 import { pokeApi } from '../api';
 import { Layout } from '@/components/layouts';
 import PokemonDetails from '@/components/Common/PokemonDetail';
-import { localFavorites } from '@/utils';
+import { getPokemonInfo, localFavorites } from '@/utils';
 
 const PokemonByNamePage: NextPageCustom<PropsDetails> = ({ pokemon }) => {
   const divRef = useRef<HTMLDivElement>(null);
@@ -72,24 +72,29 @@ export const getStaticPaths: GetStaticPaths = async ctx => {
 
   return {
     paths,
-    fallback: false,
+    fallback: 'blocking',
   };
 };
 
 export const getStaticProps: GetStaticProps = async ctx => {
   const { name } = ctx.params as { name: string };
 
-  const { data } = await pokeApi.get<PokemonDetail>(`/pokemon/${name}`);
+  const pokemon = await getPokemonInfo(name.toLowerCase());
+
+  if (!pokemon) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+      },
+    };
+  }
 
   return {
     props: {
-      pokemon: {
-        id: data.id,
-        name: data.name,
-        sprites: data.sprites,
-        types: data.types,
-      },
+      pokemon,
     },
+    revalidate: 86400,
   };
 };
 
