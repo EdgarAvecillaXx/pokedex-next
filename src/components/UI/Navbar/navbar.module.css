@@ -1,0 +1,21 @@
+.pkdx-nav:before {
+  content: '';
+  width: 50%;
+  border-top: 55px solid #e22828;
+  border-right: 40px solid transparent;
+  position: absolute;
+  top: 25px;
+  left: 0;
+}
+
+.pkdx-button-container {
+  margin-top: 20px;
+}
+
+.pkdx-button {
+  scale: 0.7;
+}
+
+.pkdx-button-main {
+  margin-top: -5px;
+}

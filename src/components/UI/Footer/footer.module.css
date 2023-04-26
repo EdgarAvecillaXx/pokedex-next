@@ -1,0 +1,17 @@
+.footer-container, .footer-container div{
+    display: flex;
+    align-items: center;
+}
+
+.footer-container{
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 100%;
+    background-color: #e22828;
+}
+
+.brand-logo{
+    margin-left: 1em;
+    rotate: 90deg;
+    border-radius: 20px;
+}
