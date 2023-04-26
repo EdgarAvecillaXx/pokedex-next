@@ -18,3 +18,5 @@ export const Favorites: ForwardRefExoticComponent<Omit<Props, 'ref'> & RefAttrib
       </>
     );
   });
+
+  Favorites.displayName = 'Favorites';

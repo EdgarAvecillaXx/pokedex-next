@@ -26,4 +26,6 @@ const PokemonDetails: ForwardRefExoticComponent<
   );
 });
 
+PokemonDetails.displayName = 'PokemonDetails';
+
 export default PokemonDetails;

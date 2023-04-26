@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
         <Text h5 color='white' css={{ marginBottom: '0' }}>
           © 2023 Copyright: EA Engineering
         </Text>
-        <Image className={styles['brand-logo']} alt='logo' src={'/ea.jpg'} width={40} height={40} />
+        <Image className={styles['brand-logo']} alt='logo' src={'/img/ea.jpg'} width={40} height={40} />
       </div>
     </footer>
   );

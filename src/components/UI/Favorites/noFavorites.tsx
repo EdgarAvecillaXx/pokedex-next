@@ -8,6 +8,7 @@ export const NoFavorites: ForwardRefExoticComponent<RefAttributes<HTMLDivElement
         <Container display='flex' direction='column' alignItems='center' justify='center'>
           <Text h1>No hay favoritos</Text>
           <Image
+            alt='No hay favoritos'
             src={
               'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png'
             }
@@ -20,3 +21,5 @@ export const NoFavorites: ForwardRefExoticComponent<RefAttributes<HTMLDivElement
     );
   }
 );
+
+NoFavorites.displayName = 'NoFavorites';

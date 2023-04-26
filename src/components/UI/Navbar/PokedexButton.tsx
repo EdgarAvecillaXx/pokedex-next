@@ -14,16 +14,16 @@ export const PokedexButton: React.FC = () => {
       className={style['pkdx-button-container']}>
       <Tooltip content={'Go to Home'} placement='bottom' className={style['pkdx-button-main']}>
         <Link href='/'>
-          <Image className={`${style['pkdx-button']}`} src={'/main-circle.svg'} />
+          <Image className={`${style['pkdx-button']}`} src={'/img/main-circle.svg'} alt='Home' />
         </Link>
       </Tooltip>
       <Tooltip content={'Go to Favorites'} placement='bottom'>
         <Link href='/favorites'>
-          <Image className={style['pkdx-button']} src={'/circle1.svg'} />
+          <Image className={style['pkdx-button']} src={'/img/circle1.svg'} alt='Favs' />
         </Link>
       </Tooltip>
-      <Image className={style['pkdx-button']} src={'/circle2.svg'} />
-      <Image className={style['pkdx-button']} src={'/circle3.svg'} />
+      <Image className={style['pkdx-button']} src={'/img/circle2.svg'} alt='' />
+      <Image className={style['pkdx-button']} src={'/img/circle3.svg'} alt='' />
     </Container>
   );
 };

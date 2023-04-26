@@ -27,8 +27,10 @@ const pokemons = (): number[] => {
   return JSON.parse(localStorage.getItem('favorites') || '[]');
 };
 
-export default {
+const localFavorites = {
   isFavorite,
   pokemons,
   toggleFavorites,
 };
+
+export default localFavorites;

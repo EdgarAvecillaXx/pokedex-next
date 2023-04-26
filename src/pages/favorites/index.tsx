@@ -5,7 +5,7 @@ import { Layout } from '@/components/layouts';
 import { Favorites, NoFavorites } from '@/components/UI/Favorites';
 import { localFavorites } from '@/utils';
 
-const favoritesPage: NextPageCustom = () => {
+const FavoritesPage: NextPageCustom = () => {
   const divRef = useRef<HTMLDivElement>(null);
   const [styleHeight, setStyleHeight] = useState('auto');
   const [favoritesPokemons, setFavoritesPokemons] = useState<number[]>([]);
@@ -39,6 +39,6 @@ const favoritesPage: NextPageCustom = () => {
   );
 };
 
-favoritesPage.getLayout = page => <Layout title='Pokemons - Favoritos'>{page}</Layout>;
+FavoritesPage.getLayout = page => <Layout title='Pokemons - Favoritos'>{page}</Layout>;
 
-export default favoritesPage;
+export default FavoritesPage;
